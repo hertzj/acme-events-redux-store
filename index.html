@@ -8,6 +8,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.0.1/react-router-dom.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js'></script>
+    <script type='text/babel' src="./app.js" defer></script>
 <style>
 body {
   font-family: verdana;
@@ -27,34 +28,5 @@ a {
   </head>
   <body>
     <div id='root'></div>
-    <script type='text/babel'>
-
-      const connect = (Component)=> {
-        class Connected extends React.Component{
-          constructor(){
-            super();
-            this.state = store.getState();
-          }
-          componentWillUnmount(){
-            this.unsubscribe();
-          }
-          componentDidMount(){
-            this.unsubscribe = store.subscribe(() => this.setState(store.getState()));
-          }
-          render(){
-            return (
-              <Component {...this.state } {...this.props }/>
-            );
-          }
-        }
-        return Connected;
-      }
-
-
-
-
-      //ReactDOM.render(<App />, document.querySelector('#root'));
-
-    </script>
   </body>
 </html>

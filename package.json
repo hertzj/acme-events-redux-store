@@ -1,0 +1,25 @@
+{
+  "name": "acme-events-redux-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hertzj/acme-events-redux-store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hertzj/acme-events-redux-store/issues"
+  },
+  "homepage": "https://github.com/hertzj/acme-events-redux-store#readme",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "sequelize": "^5.21.2"
+  }
+}
